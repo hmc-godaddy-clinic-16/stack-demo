@@ -46,9 +46,13 @@
 
 	'use strict';
 
-	var _module = __webpack_require__(1);
+	var _module2 = __webpack_require__(1);
 
-	console.log('hello ' + _module.name + '!');
+	var _module3 = _interopRequireDefault(_module2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	console.log('hello ' + _module3.default.name + '!');
 
 /***/ },
 /* 1 */
@@ -56,7 +60,10 @@
 
 	'use strict';
 
-	module.exports = {
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
 	  name: 'HMU :)'
 	};
 
