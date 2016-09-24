@@ -2,7 +2,7 @@ import React from "react";
 
 class HMU extends React.Component {
   render() {
-    return <div>Hello HMU!</div>;
+    return <div>Hello {this.props.name}!</div>;
   }
 }
 
