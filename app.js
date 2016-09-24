@@ -1,3 +1,5 @@
-import module from "./module.js";
+import React from "react";
+import ReactDOM from "react-dom";
+import HMU from "./module.js";
 
-console.log('hello ' + module.name + '!');
+ReactDOM.render(<HMU/>, document.getElementById("app"));
