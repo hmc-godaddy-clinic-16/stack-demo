@@ -18,7 +18,7 @@ September 23, 2016 site visit.
 You can download or clone this repository.
 
 ### Setting up your environment
-After you've downloaded the code, go to the top-level directory (the directory)
+After you've got the code, go to the top-level directory (the directory
 that contains the `package.json` file) and run:
 ```
 npm install
