@@ -4,6 +4,8 @@
 [Babel]: https://babeljs.io/
 [React]: https://facebook.github.io/react/
 [Express]: https://expressjs.com/
+[Mocha]: https://mochajs.org/
+[Commits]: https://github.com/hmc-godaddy-clinic-16/stack-demo/commits/master
 
 # Stack demo
 
@@ -33,6 +35,10 @@ and visit the following URL: [http://localhost:8080/webpack-dev-server/](http://
 Now, you should be able to edit and live-reload your code.
 
 ## Resources
+You can look at the [commit messages][Commits] to see the commands we used to install / set
+up the the project. 
+
+Here are the technologies we used:
    + [Node]
    + [npm]
    + [Webpack]
@@ -40,5 +46,5 @@ Now, you should be able to edit and live-reload your code.
    + [React]
 
 ## Where to go from here (eventually?)
-   + Add unit tests
+   + Add unit tests (e.g., with [Mocha])
    + [Express]
