@@ -8,12 +8,16 @@ class Hello extends React.Component {
     }
 
     let children = this.props.name.map(
-      (name) => {
-        return <p>Hello {name}{decorator}</p>
+      (name, index) => {
+        return <p key={index}>Hello {name}{decorator}</p>
       });
 
     return (
-      <div>
+      <div onClick={() => {
+        if (this.props.onClick) {
+          this.props.onClick();
+        }
+      }}>
         { children }
       </div>
     );
