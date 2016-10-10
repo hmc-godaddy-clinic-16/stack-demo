@@ -6,12 +6,15 @@
   "scripts": {
     "start": "webpack-dev-server -d",
     "build": "webpack -d",
-    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js"
+    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js",
+    "cover": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha ./test/**/*.spec.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.16.0",
     "babel-core": "^6.14.0",
+    "babel-istanbul": "^0.11.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
