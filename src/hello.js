@@ -9,7 +9,7 @@ class Hello extends React.Component {
 
     let children = this.props.name.map(
       (name) => {
-        return <div>Hello {name}{decorator}</div>
+        return <p>Hello {name}{decorator}</p>
       });
 
     return (
