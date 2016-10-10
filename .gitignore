@@ -1,2 +1,9 @@
+# Node
+npm-debug.log
 node_modules
-bundle.js.map
+
+# Dist
+dist
+
+# Webstorm
+.idea
