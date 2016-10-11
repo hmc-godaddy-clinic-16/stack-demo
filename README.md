@@ -34,6 +34,17 @@ and visit the following URL: [http://localhost:8080/webpack-dev-server/](http://
 
 Now, you should be able to edit and live-reload your code.
 
+### Running unit tests
+Run the tests
+```
+npm test
+```
+Generate a test code coverage report
+```
+npm run cover
+```
+the report will be published to `coverage/lcov-report/index.html`
+
 ## Resources
 You can look at the [commit messages][Commits] to see the commands we used to install / set
 up the the project. 

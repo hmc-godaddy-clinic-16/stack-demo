@@ -1,7 +1,14 @@
+var path = require('path');
+
 module.exports = {
-  entry: "./app.js",
+  entry: {
+    app: './src',
+    vendor: ['react', 'react-dom']
+  },
   output: {
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: "[name].js"
   },
   module: {
     loaders: [
@@ -11,4 +18,4 @@ module.exports = {
       }
     ]
   }
-}
+};
