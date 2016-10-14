@@ -4,14 +4,12 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from "react-redux";
 import App from "./components/app.js";
 import friends from "./reducers/friends.js";
-import {addFriend} from "./actions/friends.js";
 
 const store = createStore(combineReducers({
   friends
-}));
-
-store.dispatch(addFriend("HMU"));
-store.dispatch(addFriend("GoDaddy"));
+}), {
+  friends: ["HMU", "GoDaddy"]
+});
 
 ReactDOM.render(
   <Provider store={store}>
