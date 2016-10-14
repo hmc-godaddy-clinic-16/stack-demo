@@ -17,30 +17,34 @@ describe('<Hello/>', () => {
   });
 
   it('should say hello to HMU', () => {
-    const wrapper = shallow(<Hello name={["HMU"]}/>);
+    const click = sinon.spy();
+    const wrapper = shallow(<Hello name={['HMU']} onClick={click}/>);
     expect(wrapper.find('p').at(0).text()).to.equal('Hello HMU');
   });
 
   it('should say HMU is special', () => {
-    const wrapper = shallow(<Hello name={["HMU"]} special={true}/>);
+    const click = sinon.spy();
+    const wrapper = shallow(<Hello name={['HMU']} special={true} onClick={click}/>);
     expect(wrapper.find('p').at(0).text()).to.equal('Hello HMU!!!');
   });
 
   it('should say hello to multiple friends', () => {
-    const wrapper = shallow(<Hello name={["HMU", "GoDaddy"]}/>);
+    const click = sinon.spy();
+    const wrapper = shallow(<Hello name={['HMU', 'GoDaddy']} onClick={click}/>);
     expect(wrapper.find('p').at(0).text()).to.equal('Hello HMU');
     expect(wrapper.find('p').at(1).text()).to.equal('Hello GoDaddy');
   });
 
   it('should bubble click events', () => {
     const click = sinon.spy();
-    const wrapper = mount(<Hello name={["HMU", "GoDaddy"]} onClick={click}/>);
+    const wrapper = mount(<Hello name={['HMU', 'GoDaddy']} onClick={click}/>);
     wrapper.find('p').at(0).simulate('click');
     expect(click.calledOnce).to.equal(true);
   });
 
   it('should handle click when there is not a click event handler', () => {
-    const wrapper = mount(<Hello name={["HMU", "GoDaddy"]}/>);
+    const click = sinon.spy();
+    const wrapper = mount(<Hello name={['HMU', 'GoDaddy']} onClick={click}/>);
     wrapper.find('p').at(0).simulate('click');
   });
 

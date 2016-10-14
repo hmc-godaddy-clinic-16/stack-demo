@@ -4,10 +4,9 @@ import Hello from "./hello";
 import AddForm  from "./add-form";
 import {addFriend} from "../actions/friends";
 
-class App extends React.Component {
-  constructor (props, context) {
-    super(props, context);
-
+export class App extends React.Component {
+  constructor () {
+    super();
     this.state = {
       special: false
     };

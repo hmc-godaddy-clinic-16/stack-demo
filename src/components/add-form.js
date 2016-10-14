@@ -1,8 +1,8 @@
 import React from 'react';
 
 class AddForm extends React.Component {
-  constructor (props, context) {
-    super(props, context);
+  constructor () {
+    super();
     this.state = {
       text: ""
     };
