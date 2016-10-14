@@ -21,7 +21,6 @@ class App extends React.Component {
   }
 
   onAdd (text) {
-    console.log(text);
     this.props.add(text);
   }
 
