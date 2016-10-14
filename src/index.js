@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {createStore, combineReducers} from 'redux';
-import Hello from "./hello.js";
+import {Provider} from "react-redux";
+import App from "./components/app.js";
 import friends from "./reducers/friends.js";
 import {addFriend} from "./actions/friends.js";
 
@@ -12,6 +13,9 @@ const store = createStore(combineReducers({
 store.dispatch(addFriend("HMU"));
 store.dispatch(addFriend("GoDaddy"));
 
-console.dir(store.getState());
-
-ReactDOM.render(<Hello name={["HMU", "GoDaddy"]} special={true}/>, document.getElementById("app"));
+ReactDOM.render(
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  document.getElementById("app")
+);
