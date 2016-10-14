@@ -31,4 +31,8 @@ class AddForm extends React.Component {
   }
 }
 
+AddForm.propTypes = {
+  onAdd: React.PropTypes.func.isRequired
+};
+
 export default AddForm;

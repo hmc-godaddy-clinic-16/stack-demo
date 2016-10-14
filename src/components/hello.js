@@ -24,4 +24,9 @@ class Hello extends React.Component {
   }
 }
 
+Hello.propTypes = {
+  onClick: React.PropTypes.func.isRequired,
+  name: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+};
+
 export default Hello;

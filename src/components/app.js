@@ -34,6 +34,11 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  add: React.PropTypes.func.isRequired,
+  name: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+};
+
 function mapStateToProps (state) {
   return {
     name: state.friends
